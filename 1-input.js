@@ -1,4 +1,12 @@
 /*
+ * - Як window.alert() блокує інтерпретацію
+ */
+
+// console.log('До');
+// alert('qweqweqwe');
+// console.log('Після');
+
+/*
  * - Ввод користувача
  * - Методи window.confirm() и window.prompt()
  */
