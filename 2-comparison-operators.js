@@ -2,19 +2,29 @@
  * Оператори порівняння
  */
 
-// console.log(15 < 3);
+const a = 5;
+const b = 10;
+// console.log(b % a);
+
+const c = 8;
+const t = 3;
+// console.log(c % t);
+
+// console.log(15 > 3);
 
 /*
  * Приведеня (перетворювання) типів в число
  */
 
-// console.log('10' > 5);
+// console.log("10" === "10");
 
 /*
  * Оператори рівності (== и ===) та нерівності (!= и !==)
  * ✅ «ЗАВЖДИ ВИКОРИСТОВУЙТЕ ЗНАК СТРОГОЇ РІВНОСТІ (===) ТА НЕРІВНОСТІ (!==)»
  */
+// !=
+// !==
 
-const isEqual = 1 === true;
+const isEqual = 1 !== true;
 
-console.log(isEqual);
+// console.log(isEqual);

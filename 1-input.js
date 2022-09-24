@@ -1,9 +1,14 @@
+
+// console.log(a);
+const a = 10;
+// console.log(Hello, 5, a);
+
 /*
  * - Як window.alert() блокує інтерпретацію
  */
 
 // console.log('До');
-// alert('qweqweqwe');
+// alert('Ви впевнені, що хочете покинути сторінку?');
 // console.log('Після');
 
 /*
@@ -18,3 +23,4 @@
 // quantity = Number(quantity);
 // console.log(quantity);
 // console.log(typeof quantity);
+// console.log(typeof "");
