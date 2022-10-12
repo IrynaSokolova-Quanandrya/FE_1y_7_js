@@ -2,11 +2,11 @@
  * Цикл for
  */
 
-// for (ініціалізація; умова; пост - вираз) {
-//   тіло циклу
+// for (let i = 15; i <= 20; i++) {
+//     console.log(i);
 // }
 
-// console.log('');
+// console.log('Hello!');
 
 /*
  * Pre-increment и Post-increment
@@ -28,6 +28,22 @@
  * ЗП кожного працівника це випадкове число від 500 до 5000
  * Записати суму в змінну totalSalary і вивести в консоль
  */
+// 1. сворюємо змінні
+const employees = 5;
+const minSalary = 10;
+const maxSalary = 100;
+const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
+console.log(salary);
+let totalSalary = 0;
+// 2. робимо цикл, проходимося по всім робітникам
+for (let i = 1; i <= employees; i += 1) {
+   
+    totalSalary += salary
+
+    console.log(totalSalary);
+    
+}
+// console.log(totalSalary);
 
 /*
  * Напиши скрипт який порахує суму всіх парних чисел,
