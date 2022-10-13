@@ -4,13 +4,19 @@
     // код, тіло циклу (statement)
 //   }
 
-//   let age = 12;
+  let age = 0;
+// console.log(age);
+//   while (age <= 18) {
+//     age += 1
+//     console.log(age);
+// }
 
 // Цикл do...while
 
 // do {
-//     // тіло
-//   } while (вираз);
+//     console.log(age);
+//     age += 1    
+//   } while (age <=18);
   
 
 
