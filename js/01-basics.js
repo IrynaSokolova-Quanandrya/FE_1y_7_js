@@ -8,6 +8,10 @@
  *
  * 'Mango', 'Kiwi', 'Poly', 'Ajax'
  */
+
+const hotels = ['', 1, [], {}, true, undefined, NaN];
+
+
     // const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
     // console.table(friends);
 

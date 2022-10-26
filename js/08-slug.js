@@ -1,24 +1,13 @@
 /*
- * Делаем slug в URL из названия статьи (например на dev.to)
- * Заголовок статьи состоит только из букв и пробелов
+ * Робимо slug в URL з назви стратті (приклад на dev.to)
+ * Заголовок статті складається тільки з букв та пропусків
  *
- * - Нормализируем строку
- * - Разбиваем по словам
- * - Сшиваем в строку с разделителями
+ * - Нормалізуємо рядок
+ * - Разбиваємо по словах
+ * - Зшиваємо в рядок з розділителями
+ * - Ченінг
  */
 
-// Должно получиться top-10-benefits-of-react-framework
+// Повинно вийти top-10-benefits-of-react-framework
 const title = 'Top 10 benefits of React framework';
 
-const normalizedTitle = title.toLowerCase();
-// console.log(normalizedTitle);
-
-const words = normalizedTitle.split(' ');
-// console.log(words);
-
-const slug = words.join('-');
-// console.log(slug);
-
-const slug1 = title.toLowerCase().split(' ').join('-');
-
-console.log(slug1);

@@ -1,9 +1,9 @@
 /*
- * Работем с коллекцией карточек в trello
+ * Працюємо з колекцією карток в trello
  * - Метод splice()
- * - Удалить
- * - Добавить
- * - Обновить
+ * - Видалити
+ * - Додати
+ * - Оновити
  */
 
 const cards = [
@@ -17,34 +17,15 @@ const cards = [
   console.table(cards);
   
   /*
-   * Удаление (по индексу), метод indexOf()
+   * Видалення (по індексу), метод indexOf()
    */
   
-  // const cardToRemove = 'Карточка-3';
-  // const index = cards.indexOf(cardToRemove);
-  // console.log(index);
-  
-  // cards.splice(index, 1);
-  
-  // console.table(cards);
   
   /*
-   * Добавление (по индексу)
+   * Додавання (по індексу)
    */
-  // const cardToInsert = 'Карточка-6';
-  // const index = 3;
-  
-  // cards.splice(index, 0, cardToInsert);
-  // console.table(cards);
   
   /*
-   * Обновление (по индексу)
+   * Оновлення (по індексу)
    */
-  const cardToUpdate = 'Карточка-4';
-  const index = cards.indexOf(cardToUpdate);
   
-  console.log(index);
-  
-  cards.splice(index, 1, 'Обновленная карточка-4');
-  
-  console.table(cards);
