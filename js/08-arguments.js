@@ -2,31 +2,49 @@
  * Псевдомасив arguments і Array.from і ...rest
  */
 
-// const fn = function () {};
-
-// fn(1, 2, 3);
-// fn(1, 2, 3, 4, 5);
-// fn(1, 2, 3, 4, 5, 6, 7);
-
 // const fn = function () {
-//   console.log(args);
+//   // console.log(arguments);
+
+//   const arg = Array.from(arguments)
+//   // console.log(arg);
+//   return arg;
 // };
 
+
+
 // fn(1, 2, 3);
 // fn(1, 2, 3, 4, 5);
 // fn(1, 2, 3, 4, 5, 6, 7);
+// console.log(arg);
+
+// const fn = function (param1, param2, param3) {
+//   console.log("param1: ", param1);
+//   console.log("param2: ", param2);
+//   console.log("param3: ", param3);
+//   // console.log(rest);
+// };
+
+// fn('Hello', 1);
+// fn("Hi", 1, 2, 3, 4, 5);
+// fn("Привіт",1, 2, 3, 4, 5, 6, 7);
 
 /*
  * Напиши функцію add для додавання довільної кількості аргументів (чисел)
  * - Операція ... (rest)
  */
 
-// const add = function () {
-   
-//   };
+const add = function (...args) {
   
-  // console.log(add(1, 2, 3));
-  // console.log(add(1, 2, 4, 5, 6));
+  let sum = 0;
+    for (const arg of args) {
+      sum += arg
+    }
+
+    return sum;
+  };
+  
+  console.log(add(1, 2, 3));
+  console.log(add(1, 2, 4, 5, 6));
   
   /*
    * Напиши функцію filterNumbers(array [, number1, ...]) яка:
