@@ -1,3 +1,4 @@
+const obj = {} 
 /*
  * Об"єкти (робимо плейлист музики: ім"я, рейтинг, треки, кількість треків)
  * - Літерал об"єкту
@@ -6,7 +7,10 @@
  */
 
 // const playlist = {
-//   
+//   name: 'Мій супер плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+//   trackCount: 3,
 // };
 
 // console.log(playlist);
@@ -23,11 +27,27 @@ const playlist = {
     name: 'Мій супер плейлист',
     rating: 5,
     tracks: ['трек-1', 'трек-2', 'трек-3'],
-    trackCount: 3,
+    trackCount: 3,  
+  
   };
   
+  console.log(playlist);
+   console.log(playlist.tracks); 
+   console.log(playlist["time"]); 
+
+  playlist.tracks.push("Новий трек")
+
+  playlist.time = "5h"
+
+  delete playlist.time
+
+  // arr[0]
+
+  // console.log(Object.keys(playlist));
+  // console.log(Object.values(playlist));
+  // console.log(Object.entries(playlist));
   
-  // console.log(playlist);
+  console.log(playlist);
   
   
   const propertyName = 'rating';
