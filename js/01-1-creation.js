@@ -1,4 +1,4 @@
-const obj = {} 
+// const obj = {} 
 /*
  * Об"єкти (робимо плейлист музики: ім"я, рейтинг, треки, кількість треків)
  * - Літерал об"єкту
@@ -31,9 +31,9 @@ const playlist = {
   
   };
   
-  console.log(playlist);
-   console.log(playlist.tracks); 
-   console.log(playlist["time"]); 
+  // console.log(playlist);
+  //  console.log(playlist.tracks); 
+  //  console.log(playlist["time"]); 
 
   playlist.tracks.push("Новий трек")
 
@@ -43,11 +43,9 @@ const playlist = {
 
   // arr[0]
 
-  // console.log(Object.keys(playlist));
-  // console.log(Object.values(playlist));
-  // console.log(Object.entries(playlist));
   
-  console.log(playlist);
+  
+  // console.log(playlist);
   
   
   const propertyName = 'rating';
@@ -56,14 +54,21 @@ const playlist = {
   /*
    * Короткий запис властивостей
    */
-  const username = 'Mango';
+  const username = 'Oleg';
   const email = 'mango@mail.com';
   
   const signupData = {
-
+    username,
+    email,
   };
   
-  // console.log(signupData);
+// const a = {};
+// function name(params) {
+
+//   return {}
+// }
+// name({})
+  // console.log(signupData.username = "Mango");
   
   /*
    * Обчислювані властивості
@@ -71,11 +76,11 @@ const playlist = {
   
   //  <input name="color" value="tomato" >
   
-  const inputName = 'color';
+  const inputName = 'background';
   const inputValue = 'tomato';
   
   const colorPickerData = {
-    
+    [inputName]: inputValue,
   };
   
   // console.log(colorPickerData);
@@ -84,7 +89,30 @@ const playlist = {
    * Посилальний тип {} === {}
    */
   
-  
+  // let a = 5;
+  // let b = a;
+
+  // console.log(a);
+  // console.log(b);
+
+  // a = "15";
+  // b = a
+  // console.log(a);
+  // console.log(b);
+
+  const obj = {};
+  const obj1 = obj;
+
+  // console.log(obj);
+  // console.log(obj1);
+  // console.log(obj === obj1);
+
+
+
+  obj.name = "Mango"
+
+  // console.log(obj);
+  // console.log(obj1);
   /*
    * Масиви і функції це об"екти
    */
@@ -101,4 +129,4 @@ const playlist = {
   
   // fn.hello = ';)';
   
-  // console.dir(fn.hello);
+  // console.dir(fn);
