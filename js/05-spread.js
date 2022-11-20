@@ -3,21 +3,33 @@
  * - Array.prototype.concat() та аналог через spread
  */
 
-// const numbers = ;
+const numbers = [1, 6, 8, 10, 54, 3].concat([5, 4], [63, 11]);
 
+const arr1 = [5, 4];
+const arr2 = [63, 11];
+const numbers1 = [ ...arr1, 1, 6, 8, 10, 54, 3, ...arr2]
 
   // console.log(numbers);
+  // console.log(numbers1);
   
   /*
    * Пошук найнижчої або найвищої температури (числа)
    */
   const temps = [18, 14, 12, 21, 17, 29, 24];
+
+  const lowestTemp = Math.min(18, 14, 12, 21, 17, 29, 24)
+  const hightTemp = Math.max(...temps)
   
-  // console.log();
-  // console.log();
+  // console.log(lowestTemp);
+  // console.log(hightTemp);
   // console.log();
   
-  // const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
+  // const a = [
+  //   { x: 1 },
+  //   { x: 1 }, 
+  //   { y: 2 }, 
+  //   { z: 3 }
+  // ];
   
   // const b = [...a];
   
@@ -39,7 +51,11 @@
   const currentTemps = [4, 5, 6];
   const nextWeekTemps = [7, 8, 9];
   
-//   const allTemps = ;
+  // const allTemps = lastWeekTemps.concat(currentTemps, nextWeekTemps)
+
+  const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
+
+ 
   // console.log(allTemps);
   
   /*
@@ -49,13 +65,32 @@
   const a = { x: 1, y: 2 };
   const b = { x: 0, z: 3 };
   
+// const c = Object.assign({}, b , a);
+
+const c = {
+  ...a, 
+  f: 5, 
+  ...b, 
+  g: 58
+}
+
   
-//   const defaultSettings = {
-//     theme: 'light',
-//     showNotifications: true,
-//     hideSidebar: false,
-//   };
+console.log(c);
+  const defaultSettings = {
+    theme: 'light',
+    showNotifications: true,
+    hideSidebar: false,
+  };
+
+  const userSettings = {
+    showNotifications: false,
+    hideSidebar: true,
+  }
+
+  const finalSettings = {
+    ...defaultSettings,
+    ...userSettings
+  }
   
   
-  
-//   console.log(finalSettings);
+  console.log(finalSettings);

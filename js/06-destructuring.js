@@ -11,34 +11,71 @@ const playlist = {
     trackCount: 3,
   };
   
+  // console.log(
+  //   playlist.name,
+  //   playlist.rating,
+  //   playlist.tracks,
+  //   playlist.trackCount
+  // );
+
+  const { name, rating, tracks, trackCount, author = "vghcg" } = playlist;
+
+  // console.log(
+  //   name,
+  //   rating,
+  //   tracks,
+  //   trackCount,
+  //   author
+  // );
+
   
   /*
    * Глибока деструктуризація 
    */
   
-  // const profile = {
-  //   name: 'Jacques Gluke',
-  //   tag: 'jgluke',
-  //   location: 'Ocho Rios, Jamaica',
-  //   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-  //   stats: {
-  //     followers: 5603,
-  //     views: 4827,
-  //     likes: 1308,
-  //   },
-  // };
+  const profile = {
+    name: 'Jacques Gluke',
+    tag: 'jgluke',
+    location: 'Ocho Rios, Jamaica',
+    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+    stats: {
+      followers: 5603,
+      views: 4827,
+      likes: 1308,
+    },
+  };
   
   // СПОСІБ 1
+
+  // const { name, tag, location, avatar, stats } = profile;
+
+  // console.log( 
+  //   name, 
+  //   tag, 
+  //   location, 
+  //   avatar, 
+  //   stats
+  //   );
+
+  //   const { followers, views, likes } = stats;
+
+  //   console.log(followers, views, likes);
+
   // СПОСІБ 2
   
+  // const { name: newName, tag, location, avatar, stats: {followers, views, likes} } = profile;
+
+  // console.log(newName, followers, views, likes);
+
   /*
    * Деструктуризаці масивів
    */
   
   const rgb = [255, 100, 80];
+
+  const [red, , blue] = rgb;  
   
-  
-  // console.log();
+  console.log(red, blue);
   
   const authors = {
     kiwi: 4,
@@ -93,19 +130,19 @@ const playlist = {
     const { name, tag, location, ...restProps } = userProfile;
   
     // console.log(name, tag, location, avatar, followers, views, likes);
-    console.log(restProps);
+    // console.log(restProps);
   };
   
-  const profile = {
-    name: 'Jacques Gluke',
-    tag: 'jgluke',
-    location: 'Ocho Rios, Jamaica',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-    stats: {
-      followers: 5603,
-      views: 4827,
-      likes: 1308,
-    },
-  };
+  // const profile = {
+  //   name: 'Jacques Gluke',
+  //   tag: 'jgluke',
+  //   location: 'Ocho Rios, Jamaica',
+  //   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+  //   stats: {
+  //     followers: 5603,
+  //     views: 4827,
+  //     likes: 1308,
+  //   },
+  // };
   
-  showProfileInfo(profile);
+  // showProfileInfo(profile);
