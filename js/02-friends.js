@@ -76,8 +76,19 @@
   /*
    * Отримуємо імена тільки тих друзів які онлайн
    */
-  const getOnlineFriends = function () {
-  }
+  
+//   const getOnlineFriends = function (allFriends) {
+//     const friendOnline = [];
+
+//     for (const friend of allFriends) {
+//       if(friend.online){
+//        friendOnline.push(friend.name)
+//       }
+//     }
+
+//     return friendOnline;
+//  }
+//  console.log(getOnlineFriends(friends));
   
   // console.log(getOnlineFriends(friends));
   
@@ -90,4 +101,8 @@
   
   const getFriendsByStatus = function () {};
   
-//   console.log(getFriendsByStatus(friends));
+  const friendByStat = {
+    onlineFriends: [],
+    offlineFriends: [],
+  }
+  console.log(getFriendsByStatus(friends));
