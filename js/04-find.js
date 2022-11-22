@@ -1,12 +1,11 @@
 /*
  * Array.prototype.find()
- * - Поэлементо перебирает оригинальный массив
- * - Возвращает первый элемент удовлетворяющий условию или undefined
+ * - Поелементо перебирає оригінальний масив
+ * - Повертає перший елемент який зажовольняє умову пошуку або undefined
  */
 
 const numbers = [5, 10, 15, 20, 25];
 
-const number = numbers.find(number => number === 10);
 // console.log(number);
 
 const players = [
@@ -18,22 +17,17 @@ const players = [
 ];
 
 /*
- * Ищем игрока по id
+ * Шукаємо гравця по id
  */
-const playerIdToFind = 'player-3';
-const playerWithId = players.find(({ id }) => id === playerIdToFind);
+
 // console.log(playerWithId);
 
-const finPlayerById = (allPlayer, playerId) => {
-  return allPlayer.find(({ id }) => id === playerId);
-};
 
 // console.log(finPlayerById(players, 'player-1'));
 // console.log(finPlayerById(players, 'player-4'));
 
 /*
- * Ищем игрока по имени
+ * Шукаємо гравця по імені
  */
-const playerNameToFind = 'Poly';
-const playerWithName = players.find(player => player.name === playerNameToFind);
+
 // console.log(playerWithName);

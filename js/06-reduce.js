@@ -1,23 +1,17 @@
 /*
  * Array.prototype.reduce()
- * - Поэлементо перебирает оригинальный массив
- * - Возвращает что угодно 🤯
- * - Заменяет всё на свете, но использовать нужно с умом
+ * - Поелементо перебирає оригінальний масив
+ * - Повертає що завгодно 🤯
+ * - Замінює все на світі, але використовувати потрібно з розумом
  */
 
 const numbers = [5, 10, 15, 20, 25];
 
-const total = numbers.reduce((acc, number) => acc + number, 0);
 // console.log(total);
 
-// accumulator = 0 -> number = 5 -> return 0 + 5
-// accumulator = 5 -> number = 10 -> return 5 + 10
-// accumulator = 15 -> number = 15 -> return 15 + 15
-// accumulator = 30 -> number = 20 -> return 30 + 20
-// accumulator = 50 -> number = 25 -> return 50 + 25
 
 /*
- * Считаем общую зарплату
+ * Рахуємо загальну зп
  */
 
 const salary = {
@@ -26,14 +20,11 @@ const salary = {
   ajax: 150,
 };
 
-const totalSalary = Object.values(salary).reduce(
-  (total, value) => total + value,
-  0,
-);
+
 // console.log(totalSalary);
 
 /*
- * Считаем общее количество часов
+ * Рахуємо загальну кількість годин
  */
 
 const players = [
@@ -44,15 +35,12 @@ const players = [
   { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
 ];
 
-const totalTimePlayed = players.reduce(
-  (totalTime, player) => totalTime + player.timePlayed,
-  0,
-);
+
 
 // console.log(totalTimePlayed);
 
 /*
- * Считаем общую сумму товаров корзины
+ * Рахуємо загальну кількість товарів в кошику
  */
 const cart = [
   { label: 'Apples', price: 100, quantity: 2 },
@@ -60,15 +48,11 @@ const cart = [
   { label: 'Lemons', price: 70, quantity: 4 },
 ];
 
-const totalAmount = cart.reduce(
-  (total, { price, quantity }) => total + price * quantity,
-  0,
-);
 
 // console.log(totalAmount);
 
 /*
- * Собираем все теги из твитов
+ * Збираємо всі теги з твітів
  */
 const tweets = [
   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
@@ -87,29 +71,31 @@ console.log(allTags);
 //  ['js', 'nodejs', 'html', 'css']
 
 /*
- * Ведём статистику тегов
+ * Ведемо статистику тегів
  */
-// const tagsStats = allTags.reduce((acc, tag) => {
-//   console.log(acc);
-
-//   if (acc[tag]) {
-//     acc[tag] += 1;
-
-//     return acc;
-//   }
-
-//   acc[tag] = 1;
-
-//   return acc;
-// }, {});
-
 const tagsStats = allTags.reduce((acc, tag) => {
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
-  };
-}, {});
-// console.log(tagsStats);
+  console.log(acc);
+  
 
-// если свойство с ключом tag есть. увеличить его значение на 1
-// если свойствоства нет с таким ключом что в tag, сделать и записать 1
+  if (acc[tag]) {
+    acc[tag] += 1;
+
+    return acc;
+  }
+
+  acc[tag] = 1;
+
+  return acc;
+}, {});
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   console.log([tag]);
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+console.log(tagsStats);
+
+// якщо властивість з ключем tag є, збільшуємо його значення на 1
+// якщо властивості немає с таким ключем що в tag, створити і записати 1

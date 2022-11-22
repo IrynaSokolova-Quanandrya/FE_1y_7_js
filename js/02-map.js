@@ -1,15 +1,13 @@
 /*
  * Array.prototype.map()
- * - Поэлементо перебирает оригинальный массив
- * - Не изменяет оригинальный массив
- * - Возвращает новый массив такой же длины
+ * - Поелементо перебирає оригінальний масив
+ * - Не змінює оригінальний масив
+ * - Повертає новий масив такої ж довжини
  */
 
 const numbers = [5, 10, 15, 20, 25];
 
-const doubledNums = numbers.map(number => {
-  return number * 3;
-});
+
 // console.log('numbers', numbers);
 // console.log('doubledNums', doubledNums);
 
@@ -23,50 +21,39 @@ const players = [
 console.table(players);
 
 /*
- * Получаем массив имён всех игроков
+ * Отримуємо масив імен всіх гравців
  */
 
-const playerNames = players.map(player => player.name);
+
 // console.log('playerNames', playerNames);
 
-const playerIds = players.map(player => player.id);
 // console.log('playerIds', playerIds);
 
-// const res = players.map(({ name, online }) => ({ name, online }));
-// console.log('res', res);
 
 /*
- * Увеличиваем кол-во поинтов каждого игрока на 10%
+ * Збільшуємо кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
  */
 
-const upatedPlayers = players.map(player => ({
-  ...player,
-  points: player.points * 1.1,
-}));
 
 // console.table(upatedPlayers);
 // console.log(upatedPlayers);
 
 /*
- * Увеличиваем кол-во часов игрока по id
+ * Збільшуємо кількість годин гравця по id
  */
 
 const playerIdToUpdate = 'player-3';
 
-const updatedPlayers = players.map(player => {
-  if (playerIdToUpdate === player.id) {
-    return {
-      ...player,
-      timePlayed: player.timePlayed + 100,
-    };
-  }
+// const updatedPlayers = players.map(player => {
+//   if (playerIdToUpdate === player.id) {
+//     return {
+//       ...player,
+//       timePlayed: player.timePlayed + 100,
+//     };
+//   }
 
-  return player;
-});
+//   return player;
+// });
 
-// const updatedPlayers = players.map(player =>
-//   playerIdToUpdate === player.id
-//     ? { ...player, timePlayed: player.timePlayed + 100 }
-//     : player,
-// );
+// Переписуємо на тернарник
 // console.table(updatedPlayers);

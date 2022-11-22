@@ -8,20 +8,19 @@ const players = [
   
   /*
    * Array.prototype.every()
-   * - Поэлементо перебирает оригинальный массив
-   * - Возвращает true если все элементы массива удовлетворяют условию
+   * - Поелементо перебирає оригінальний масив
+   * - Повертає true якщо всі елементи масива задовільняють умову
    */
   
-  const isAllOnline = players.every(player => player.online);
   // console.log('isAllOnline: ', isAllOnline);
   
   /*
    * Array.prototype.some()
-   * - Поэлементо перебирает оригинальный массив
-   * - Возвращает true если хотя бы один элемент массива удовлетворяет условию
+   * - Поелементо перебирає оригінальний масив
+   * - Повертає true якщо хоча б один елемент масива задовільняє умову
    */
-  const isAnyOnline = players.some(player => player.online);
-  console.log('isAnyOnline: ', isAnyOnline);
   
-  const anyHardcorePlayers = players.some(player => player.timePlayed > 400);
-  console.log('anyHardcorePlayers: ', anyHardcorePlayers);
+  // console.log('isAnyOnline: ', isAnyOnline);
+  
+  
+  // console.log('anyHardcorePlayers: ', anyHardcorePlayers);
