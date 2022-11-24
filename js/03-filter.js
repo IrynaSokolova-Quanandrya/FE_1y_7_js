@@ -9,7 +9,11 @@
 
 const numbers = [5, 10, 15, 20, 25];
 
-// console.log(filteredNumbers);
+const filteredNumbers = numbers.filter(function (number) {
+  return !number;
+})
+
+console.log(filteredNumbers);
 
 const players = [
   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
