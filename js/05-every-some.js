@@ -12,6 +12,11 @@ const players = [
    * - Повертає true якщо всі елементи масива задовільняють умову
    */
   
+  // const anyHardcorePlayers = players.every(function ({timePlayed}) {
+  //   return timePlayed > 200;
+  // })
+
+  // console.log(anyHardcorePlayers);
   // console.log('isAllOnline: ', isAllOnline);
   
   /*
@@ -20,7 +25,12 @@ const players = [
    * - Повертає true якщо хоча б один елемент масива задовільняє умову
    */
   
-  // console.log('isAnyOnline: ', isAnyOnline);
+
+  const isAnyOnline = players.some(function ({online}) {
+    return online;
+  })
+
+  console.log('isAnyOnline: ', isAnyOnline);
   
   
   // console.log('anyHardcorePlayers: ', anyHardcorePlayers);

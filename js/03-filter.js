@@ -1,16 +1,18 @@
 /*
  * Array.prototype.filter()
  * - Поелементо перебирає оригінальний масив
- * - Повертає новий масив (с елементами або пустий)
+ * - Повертає новий масив (з елементами або пустий)
  * - Додає в повертаємий масив елементи які задовольняють умови коллбек-функції
  *    - якщо коллбек повернув true елемент додається в масив, що повертається
  *    - якщо коллбек повернув false елемент НЕ додається в масив, що повертається
  */
 
+// arrray.method(callback(item){});
+
 const numbers = [5, 10, 15, 20, 25];
 
 const filteredNumbers = numbers.filter(function (number) {
-  return !number;
+  return number < 5;
 })
 
 console.log(filteredNumbers);
@@ -26,6 +28,8 @@ const players = [
 /*
  * Отримуємо масив всіх гравців онлайн
  */
+
+// const onlinePlayers = 
 
 
 // console.table(onlinePlayers);

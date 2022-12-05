@@ -42,7 +42,12 @@ console.log('playerNames', playerNames);
  * Збільшуємо кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
  */
 
+const upatedPlayers = players.map(player => ({
+    ...player,
+    points: player.points * 1.1,  
+}))
 
+// [.....................]
 // console.table(upatedPlayers);
 // console.log(upatedPlayers);
 

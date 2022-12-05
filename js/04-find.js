@@ -1,12 +1,16 @@
 /*
  * Array.prototype.find()
  * - Поелементо перебирає оригінальний масив
- * - Повертає перший елемент який зажовольняє умову пошуку або undefined
+ * - Повертає перший елемент який задовольняє умову пошуку або undefined
  */
 
 const numbers = [5, 10, 15, 20, 25];
 
-// console.log(number);
+const number = numbers.find(function (number) {
+  return number >= 10;
+  
+})
+console.log(number);
 
 const players = [
   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
@@ -19,6 +23,7 @@ const players = [
 /*
  * Шукаємо гравця по id
  */
+
 
 // console.log(playerWithId);
 
