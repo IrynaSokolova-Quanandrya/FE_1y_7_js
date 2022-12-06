@@ -8,3 +8,4 @@ const magicBtn = document.querySelector('.js-magic-btn');
  * - contains(клас)
  */
 
+// Робимо приклад з current сторінкою
