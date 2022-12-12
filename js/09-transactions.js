@@ -1,27 +1,16 @@
 import transactionHistory from './data/transactions.js';
 
-// const makeTransactionTableRowMarkup = transaction => {
-//   const { id, amount, date, business, type, name, account } = transaction;
+    // <tr>
+    //     <td>ID транзакції</td>
+    //     <td>Сума</td>
+    //     <td>Дата</td>
+    //     <td>Хто</td>
+    //     <td>Тип транзації</td>
+    //     <td>Ім'я рахунку</td>
+    //     <td>Номер рахунку</td> 
+    // </tr> 
 
-//   return `
-//   <tr>
-//     <td>${id}</td>
-//     <td>${amount}</td>
-//     <td>${date}</td>
-//     <td>${business}</td>
-//     <td>${type}</td>
-//     <td>${name}</td>
-//     <td>${account}</td>
-//   </tr>
-//   `;
-// };
 
-// console.log(transactionHistory);
-// const tableEl = document.querySelector('.js-transaction-table');
-// const transactionTableRowsMarkup = transactionHistory
-//   .map(makeTransactionTableRowMarkup)
-//   .join('');
 
-// tableEl.insertAdjacentHTML('beforeend', transactionTableRowsMarkup);
 
-// console.log(transactionTableRowsMarkup);
+

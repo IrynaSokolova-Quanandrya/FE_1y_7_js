@@ -13,9 +13,9 @@ const colorPickerOptions = [
   const colorPickerContainerEl = document.querySelector('.js-color-picker');
   
   
+
   /*
    * Пишемо функцію для створення розмітки колорпікеру
    */
-  
-  
+
   

@@ -1,6 +1,6 @@
 export default [
     {
-      name: 'Сервоприводы',
+      name: 'Товар-1',
       description:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eius deleniti dolor facilis consectetur laborum aperiam exercitationem quam hic natus.',
       price: 2000,
@@ -8,7 +8,7 @@ export default [
       onSale: true,
     },
     {
-      name: 'Генератор поля',
+      name: 'Товар-2',
       description:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eius deleniti dolor facilis consectetur laborum aperiam exercitationem quam hic natus.',
       price: 3000,
@@ -16,7 +16,7 @@ export default [
       onSale: false,
     },
     {
-      name: 'Нулевой элемент',
+      name: 'Товар-3',
       description:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eius deleniti dolor facilis consectetur laborum aperiam exercitationem quam hic natus.',
       price: 1500,
@@ -24,7 +24,7 @@ export default [
       onSale: false,
     },
     {
-      name: 'Титаниум',
+      name: 'Товар-4',
       description:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eius deleniti dolor facilis consectetur laborum aperiam exercitationem quam hic natus.',
       price: 2500,
