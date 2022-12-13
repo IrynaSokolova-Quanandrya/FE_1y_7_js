@@ -123,6 +123,22 @@ const users = [
 // }
      
   // console.log(getSortedUniqueSkills(users));
+
+  //  ЗАДАЧА 8 ДЗ-9
+  // Масив імен всіх користувачів у яких є друг із зазначеним ім'ям.
+
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter((user)=>{
+  if(user.friends.includes(friendName)){
+    console.log(user.name);
+  } 
+  
+  })
+  
+};
+
+console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 //  ЗАДАЧА 9 ДЗ-9
 // Масив імен (поле name) людей, відсортованих в залежності від кількості їх друзів (поле friends)
 
@@ -131,7 +147,7 @@ const getNamesSortedByFriendsCount = users => {
   .map(user=>user.name)
 };
 
-console.log(getNamesSortedByFriendsCount(users));
+// console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
  
 // const users = [
