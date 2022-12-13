@@ -12,10 +12,49 @@ const colorPickerOptions = [
   
   const colorPickerContainerEl = document.querySelector('.js-color-picker');
   
+  // const option = colorPickerOptions[0];
+  // console.log(option);
+
+  // const buttonEl = document.createElement('button');
+  // buttonEl.type = 'button';
+  // buttonEl.textContent = option.label;
+  // buttonEl.style.backgroundColor = option.color;
+
   
+
+
+  // const buttons =  colorPickerOptions.map(function (option) {
+  //   const buttonEl = document.createElement('button');
+  //     buttonEl.type = 'button';
+  //     buttonEl.classList = 'color-picker__option'
+  //     buttonEl.textContent = option.label;
+  //     buttonEl.style.backgroundColor = option.color;
+
+  // // console.log(buttonEl);
+  // return buttonEl
+  // })
+
+  // console.log(buttons);
+
+  // colorPickerContainerEl.append(...buttons)
 
   /*
    * Пишемо функцію для створення розмітки колорпікеру
    */
 
-  
+  const createBtnEl = function (options) {
+   return options.map(function (option) {
+      const buttonEl = document.createElement('button');
+        buttonEl.type = 'button';
+        buttonEl.classList = 'color-picker__option'
+        buttonEl.textContent = option.label;
+        buttonEl.style.backgroundColor = option.color;
+    return buttonEl
+    })    
+    
+  }
+
+  const btns = createBtnEl(colorPickerOptions);
+
+
+  colorPickerContainerEl.append(...btns)
