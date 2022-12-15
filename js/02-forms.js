@@ -7,6 +7,14 @@
 
 const form = document.querySelector('.js-register-form');
 
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    
+const currentTargetEl = event.currentTarget.elements
+    console.dir(currentTargetEl.subscription.value);
+    console.log('Submit');
+})
+
 // form.addEventListener('submit', onFormSubmit);
 
 // function onFormSubmit(event) {
