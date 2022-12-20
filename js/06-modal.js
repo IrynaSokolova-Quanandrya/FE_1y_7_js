@@ -28,12 +28,4 @@ const refs = {
   refs.closeModalBtn.addEventListener('click', );
   refs.backdrop.addEventListener('click', );
   
-  function onOpenModal() {}
   
-  function onCloseModal() {}
-  
-  function onBackdropClick(event) {
-      console.log('Клікнули саме в бекдроп!!!!');
-  }
-  
-  function onEscKeyPress(event) {}
