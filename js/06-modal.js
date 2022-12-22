@@ -24,8 +24,32 @@ const refs = {
     backdrop: document.querySelector('.js-backdrop'),
   };
   
-  refs.openModalBtn.addEventListener('click', );
-  refs.closeModalBtn.addEventListener('click', );
-  refs.backdrop.addEventListener('click', );
+  refs.openModalBtn.addEventListener('click', onBtnClickOpen);
+  refs.closeModalBtn.addEventListener('click', onBtnClickClose);
+  refs.backdrop.addEventListener('click', onBackdropClose);
+
+// console.log(document.body);
+
+  function onBtnClickOpen() {
+    document.body.classList.add('show-modal')
+  }
+
+  function onBtnClickClose() {
+    document.body.classList.remove('show-modal')
+  }
+
+  function onBackdropClose(event) {
+    // console.log(event.currentTarget);
+    // console.log(event.target);
+    if(event.currentTarget === event.target){
+      onBtnClickClose()
+    }
+ 
+  }
+
+
+
+
+
   
-  
+ 
