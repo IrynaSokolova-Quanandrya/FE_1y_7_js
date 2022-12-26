@@ -223,3 +223,103 @@ const getSortedUniqueSkills = users => {
 
 // console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+// Артем Добровольский
+
+// 7.2 знайти суму років скільки прожили всі вченні
+
+
+function checkIfCanAccessContent(subType) {
+  const canAccessContent = subType === "pro" || subType === "vip" ? true : false
+
+ return canAccessContent;
+}
+
+// console.log(checkIfCanAccessContent("pro"))
+// 2
+// Відсортувати вчених по алфавіту
+
+const arr = [
+  { name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
+  { name: "Isaac", surname: "Newton", born: 1643, dead: 1727, id: 2 },
+  { name: "Galileo", surname: "Galilei", born: 1564, dead: 1642, id: 3 },
+  { name: "Marie", surname: "Curie", born: 1867, dead: 1934, id: 4 },
+  { name: "Johannes", surname: "Kepler", born: 1571, dead: 1630, id: 5 },
+  { name: "Nicolaus", surname: "Copernicus", born: 1473, dead: 1543, id: 6 },
+  { name: "Max", surname: "Planck", born: 1858, dead: 1947, id: 7 },
+  { name: "Katherine", surname: "Blodgett", born: 1898, dead: 1979, id: 8 },
+  { name: "Ada", surname: "Lovelace", born: 1815, dead: 1852, id: 9 },
+  { name: "Sarah E.", surname: "Goode", born: 1855, dead: 1905, id: 10 },
+  { name: "Lise", surname: "Meitner", born: 1878, dead: 1968, id: 11 },
+  { name: "Hanna", surname: "Hammarström", born: 1829, dead: 1909, id: 12 }
+];
+
+// const newArr = arr;
+
+// arr.sort((a, b) => a.name.localeCompare(b.name) && a.surname.localeCompare(b.surname))
+// // console.log(arr)
+
+// const name = arr
+// .filter(sain=>sain.name[0] === sain.surname[0])
+//     // .filter(arr => arr.name[0])
+//     // .map(arr => arr.name)
+
+//     console.log(name);
+
+// 7.2 знайти суму років скільки прожили всі вченні
+  //   arr.map(ages => dead-born).reduce(callback(acc, ages)){
+  //     acc+=ages
+  // };
+
+
+  // ДЗ 10 ЗАДАЧА 4
+
+ const counterContainer = document.querySelector('#counter')
+ const decrementBtn = document.querySelector('[data-action="decrement"]')
+ const incrementBtn = document.querySelector('[data-action="increment"]')
+ const value = document.querySelector('#value')
+ 
+ 
+ decrementBtn.addEventListener('click', decrement)
+ incrementBtn.addEventListener('click', increment)
+
+ let counterValue = 0;
+
+ function increment() {
+   value.textContent = counterValue += 1
+ }
+
+ function decrement() {
+  counterValue -= 1
+  value.textContent = counterValue
+ }
+
+// ДЗ 10 ЗАДАЧА 3 (insertAdjacentHTML())
+
+const images = [
+  {
+    url:
+      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
+
+const link = document.createElement('a')
+link.classList.add('link')
+link.textContent = 'Посилання1'
+
+counterContainer.appendChild(link);
+
+counterContainer.insertAdjacentHTML('beforeend', `<a class="link">${images.url[0]}</a>`)
+
+counterContainer.innerHTML = ''
