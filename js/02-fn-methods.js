@@ -1,5 +1,5 @@
 /*
- * call и apply
+ * call та apply
  */
 // const showThis = function (a, b, arr) {
 //     console.log(a, b, arr);
@@ -13,44 +13,44 @@
 //     b: 10,
 // };
 
-// showThis.call(objA, 5, 1, [100, 200, 300]);
-// showThis.apply(objA, [5, 1, [100, 200, 300]]);
-
 // const objB = {
 //     x: 788,
 //     y: 25,
 // };
 
-// showThis.call(objB, 1, 1, 2);
-// showThis.apply(objB, [1, 1, 2]);
+// showThis.call(); викликає функцію саме в цьому місці
+// showThis.apply();
 
 // showThis();
 
-const changeColor = function (color) {
-    console.log('changeColor -> this', this);
-    this.color = color;
-};
+// ПРИКЛАД 1
+// const changeColor = function (color) {
+//     console.log('changeColor -> this', this);
+//     this.color = color;
+// };
 
-const hat = {
-    color: 'black',
-};
+// const hat = {
+//     color: 'black',
+// };
 
 // changeColor.call(hat, 'orange');
 // console.log(hat);
 
-const sweater = {
-    color: 'green',
-};
+// ПРИКЛАД 2
+// const sweater = {
+//     color: 'green',
+// };
 
 // changeColor.call(sweater, 'blue');
 // console.log(sweater);
 
 /*
- * bind
+ * bind - створює нову функцію (копію) 
+ * з назавжди прив'язаним контекстом
  */
 
-const changeHatColor = changeColor.bind(hat);
-const changeSweaterColor = changeColor.bind(sweater);
+// const changeHatColor = changeColor.bind(hat);
+// const changeSweaterColor = changeColor.bind(sweater);
 
 // changeHatColor('yellow');
 // console.log(hat);
@@ -78,7 +78,7 @@ const updateCounter = function (value, operation) {
     operation(value);
 };
 
-// updateCounter(10, counter.increment.bind(counter));
-// updateCounter(5, counter.decrement.bind(counter));
+updateCounter(1, counter.increment.bind(counter));
+updateCounter(1, counter.decrement.bind(counter));
 
 // console.log(counter);

@@ -19,12 +19,12 @@
 
 /*
  * Контекст (this)
- *    - Где и как была объявлена функция НЕ ИМЕЕТ НИКАКОГО ВЛИЯНИЯ на контекст.
- *    - Контекст определяется В МОМЕНТ ВЫЗОВА ФУНКЦИИ, если он не привязан явно.
+ *    - Де і як була об'явлена функція НЕ МАЄ НІЯКОГО ВПЛИВУ на контекст.
+ *    - Контекст опреділяється В МОМЕНТ ВИКЛИКУ ФУНКЦІЇ, якщо він не прив'язаний явно.
  */
 
 /*
- * Как метод объекта. В контексте объекта.
+ * Як метод об'єкту. В контексті об'єкту.
  */
 
 // const user = {
@@ -34,23 +34,22 @@
 //     },
 // };
 
-// user.showTag();
 
 /*
- * Вызов без контекста
- * - В строгом режиме = undefined
- * - Не в строгом режиме = window
+ * Виклик без контексту
+ * - В суворому режимі = undefined
+ * - Не в суворому режимі = window
  */
 
 // const foo = function () {
 //     console.log('foo -> this', this);
 // };
 
-// foo();
+
 
 /*
- * Как метод объекта, но объявлена как внешняя функция.
- * В контексте объекта.
+ * Як метод об'єкту, але об'явлена як зовнішня функція.
+ * В контексті об'єкту.
  */
 
 // const showTag = function () {
@@ -58,19 +57,17 @@
 //     console.log('showTag -> this.tag', this.tag);
 // };
 
-// showTag();
 
 // const user = {
 //     tag: 'Mango',
 // };
 
-// user.showUserTag = showTag;
-// console.log('user', user);
+
 
 // user.showUserTag();
 
 /*
- * Вызов без контекста, но объявлена как метод объекта.
+ * Виклик без контексту, але об'явлена як метод об'єкту.
  */
 
 // const user = {
@@ -88,7 +85,7 @@
 // outerShowTag();
 
 /*
- * Контекст в callback-функциях
+ * Контекст в callback-функціях
  */
 
 // const user = {
@@ -108,17 +105,17 @@
 // invokeAction(user.showTag);
 
 /*
- * Тренируемся 1
+ * Тренуємося 1
  */
 
 // const fn = function () {
 //     console.log('fn -> this', this);
 // };
 
-// fn(); // Какой this ???
+// fn(); // Який this ???
 
 /*
- * Тренируемся 2
+ * Тренуємося 2
  */
 
 // const book = {
@@ -131,16 +128,16 @@
 //     },
 // };
 
-// book.showThis(); // Какой this ???
+// book.showThis(); // Який this ???
 
 // const outerShowThis = book.showThis;
-// outerShowThis(); // Какой this ???
+// outerShowThis(); // Який this ???
 
 // const outerShowTitle = book.showTitle;
-// outerShowTitle(); // Какой this ???
+// outerShowTitle(); // Який this ???
 
 /*
- * Тренируемся 3
+ * Тренуємося 3
  */
 
 // const makeChangeColor = function () {
@@ -149,7 +146,7 @@
 //         // this.color = color;
 //     };
 
-//     // changeColor(); // Какой this ???
+//     // changeColor(); // Який this ???
 
 //     const sweater = {
 //         color: 'teal',
@@ -157,17 +154,17 @@
 
 //     sweater.updateColor = changeColor;
 
-//     // sweater.updateColor('red'); // Какой this ???
+//     // sweater.updateColor('red'); // Який this ???
 
 //     return sweater.updateColor;
 // };
 
 // const swapColor = makeChangeColor();
 
-// swapColor('blue'); // Какой this ???
+// swapColor('blue'); // Який this ???
 
 /*
- * Тренируемся 4
+ * Тренуємося 4
  */
 
 // const makeChangeColor = function () {
@@ -179,34 +176,34 @@
 // };
 
 // const updateColor = makeChangeColor();
-// updateColor('yellow'); // Какой this ???
+// updateColor('yellow'); // Який this ???
 
 // const hat = {
 //     color: 'blue',
 //     updateColor: updateColor,
 // };
 
-// hat.updateColor('orange'); // Какой this ???
+// hat.updateColor('orange'); // Який this ???
 
 /*
- * Тренируемся 5
+ * Тренуємося 5
  */
 
-const counter = {
-    value: 0,
-    increment(value) {
-        console.log('increment -> this', this);
-        this.value += value;
-    },
-    decrement(value) {
-        console.log('decrement -> this', this);
-        this.value -= value;
-    },
-};
+// const counter = {
+//     value: 0,
+//     increment(value) {
+//         console.log('increment -> this', this);
+//         this.value += value;
+//     },
+//     decrement(value) {
+//         console.log('decrement -> this', this);
+//         this.value -= value;
+//     },
+// };
 
-const updateCounter = function (value, operation) {
-    operation(value);
-};
+// const updateCounter = function (value, operation) {
+//     operation(value);
+// };
 
-updateCounter(10, counter.increment);
-updateCounter(5, counter.decrement);
+// updateCounter(10, counter.increment);
+// updateCounter(5, counter.decrement);
