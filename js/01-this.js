@@ -1,10 +1,11 @@
+
 /*
  * Функція це об'єкт -> ПОСИЛАЛЬНИЙ ТИП
  */
 
 // Повторюємо чому посилальний тип
-// console.log('[] === []: ', [] === []);
-// console.log('{} === {}: ', {} === {});
+// console.log([] === []);
+// console.log({} === {});
 // console.log(
 //     'function() {} === function() {}: ',
 //     function () {} === function () {},
@@ -27,14 +28,19 @@
  * Як метод об'єкту. В контексті об'єкту.
  */
 
-// const user = {
-//     tag: 'Mango',
-//     showTag() {
-//         console.log('showTag -> this', this);
-//     },
-// };
+const user = {
+    tag: 'Mango',
+    name,
+    age: 15,
+    showTag() {
+        console.log(this.age = 20);
+    },
+};
 
 
+console.log(user.showTag());
+
+console.log(user);
 /*
  * Виклик без контексту
  * - В суворому режимі = undefined
@@ -42,27 +48,31 @@
  */
 
 // const foo = function () {
-//     console.log('foo -> this', this);
+//     console.log('this', this);
 // };
 
-
+// foo()
 
 /*
  * Як метод об'єкту, але об'явлена як зовнішня функція.
  * В контексті об'єкту.
  */
 
-// const showTag = function () {
-//     console.log('showTag -> this', this);
-//     console.log('showTag -> this.tag', this.tag);
-// };
+const showTag = function () {
+    console.log('this: ', this);
+    console.log('this.tag: ', this.tag);
+};
 
-
+// showTag()
 // const user = {
 //     tag: 'Mango',
 // };
 
+// user.name = 'jhgjhg';
+// console.log(user);
 
+// user.showUserTag = showTag;
+// console.log(user);
 
 // user.showUserTag();
 
@@ -73,14 +83,14 @@
 // const user = {
 //     tag: 'Mango',
 //     showTag() {
-//         console.log('showTag -> this', this);
-//         console.log('showTag -> this.tag', this.tag);
+//         console.log('this: ', this);
+//         console.log('this.tag: ', this.tag);
 //     },
 // };
 
 // user.showTag();
 
-// const outerShowTag = user.showTag;
+const outerShowTag = user.showTag;
 
 // outerShowTag();
 
@@ -108,9 +118,9 @@
  * Тренуємося 1
  */
 
-// const fn = function () {
-//     console.log('fn -> this', this);
-// };
+const fn = function () {
+    console.log(this);
+};
 
 // fn(); // Який this ???
 
@@ -118,23 +128,24 @@
  * Тренуємося 2
  */
 
-// const book = {
-//     title: 'React for beginners',
-//     showThis() {
-//         console.log('showThis -> this', this);
-//     },
-//     showTitle() {
-//         console.log('showTitle -> this.title', this.title);
-//     },
-// };
+const book = {
+    title: 'React for beginners',
+    showThis() {
+        console.log(this);
+    },
+    showTitle() {
+        console.log(this.title);
+    },
+};
 
 // book.showThis(); // Який this ???
 
 // const outerShowThis = book.showThis;
+// console.log(book.showThis());
 // outerShowThis(); // Який this ???
 
-// const outerShowTitle = book.showTitle;
-// outerShowTitle(); // Який this ???
+const outerShowTitle = book.showTitle;
+outerShowTitle(); // Який this ???
 
 /*
  * Тренуємося 3
@@ -207,3 +218,4 @@
 
 // updateCounter(10, counter.increment);
 // updateCounter(5, counter.decrement);
+
