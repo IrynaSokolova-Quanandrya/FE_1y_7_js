@@ -38,9 +38,9 @@ const user = {
 };
 
 
-console.log(user.showTag());
+// console.log(user.showTag());
 
-console.log(user);
+// console.log(user);
 /*
  * Виклик без контексту
  * - В суворому режимі = undefined
@@ -128,15 +128,15 @@ const fn = function () {
  * Тренуємося 2
  */
 
-const book = {
-    title: 'React for beginners',
-    showThis() {
-        console.log(this);
-    },
-    showTitle() {
-        console.log(this.title);
-    },
-};
+// const book = {
+//     title: 'React for beginners',
+//     showThis() {
+//         console.log(this);
+//     },
+//     showTitle() {
+//         console.log(this.title);
+//     },
+// };
 
 // book.showThis(); // Який this ???
 
@@ -144,8 +144,8 @@ const book = {
 // console.log(book.showThis());
 // outerShowThis(); // Який this ???
 
-const outerShowTitle = book.showTitle;
-outerShowTitle(); // Який this ???
+// const outerShowTitle = book.showTitle;
+// outerShowTitle(); // Який this ???
 
 /*
  * Тренуємося 3
@@ -219,3 +219,7 @@ outerShowTitle(); // Який this ???
 // updateCounter(10, counter.increment);
 // updateCounter(5, counter.decrement);
 
+
+console.dir(function name(params) {
+    
+});
