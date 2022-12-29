@@ -274,16 +274,17 @@ const arr = [
 
   // ДЗ 10 ЗАДАЧА 4
 
- const counterContainer = document.querySelector('#counter')
- const decrementBtn = document.querySelector('[data-action="decrement"]')
- const incrementBtn = document.querySelector('[data-action="increment"]')
- const value = document.querySelector('#value')
- 
- 
- decrementBtn.addEventListener('click', decrement)
- incrementBtn.addEventListener('click', increment)
+  const counter = {
+    counterValue: 0,
+    increment() {
+      this.counterValue +=1;
+    },
+    decrement(){
+      this.counterValue -=1;
+    }
+  }
 
- let counterValue = 0;
+let counterValue = 0;
 
  function increment() {
    value.textContent = counterValue += 1
@@ -293,6 +294,18 @@ const arr = [
   counterValue -= 1
   value.textContent = counterValue
  }
+
+ 
+ const counterContainer = document.querySelector('#counter')
+ const decrementBtn = document.querySelector('[data-action="decrement"]')
+ const incrementBtn = document.querySelector('[data-action="increment"]')
+ const value = document.querySelector('#value')
+ 
+ 
+ decrementBtn.addEventListener('click', decrement)
+ incrementBtn.addEventListener('click', increment)
+
+ 
 
 // ДЗ 10 ЗАДАЧА 3 (insertAdjacentHTML())
 
