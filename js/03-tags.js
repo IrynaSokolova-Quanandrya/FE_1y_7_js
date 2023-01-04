@@ -1,7 +1,8 @@
 /*
- * Делегирование
- * - один из многих
- * - несколько из многих и Set
+ * Делегування
+ * - загальний слухач
+ * - один із багатьох
+ * - декілька із багатьох та new Set()
  */
 
 // const tagsContainer = document.querySelector('.js-tags');
@@ -27,26 +28,26 @@
 //   console.log(selectedTag);
 // }
 
-const tagsContainer = document.querySelector('.js-tags');
-const selectedTags = new Set();
+// const tagsContainer = document.querySelector('.js-tags');
+// const selectedTags = new Set();
 
-tagsContainer.addEventListener('click', onTagsContainerClick);
+// tagsContainer.addEventListener('click', onTagsContainerClick);
 
-function onTagsContainerClick(evt) {
-  if (evt.target.nodeName !== 'BUTTON') {
-    return;
-  }
+// function onTagsContainerClick(evt) {
+//   if (evt.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
 
-  const btn = evt.target;
-  const tag = btn.dataset.value;
-  const isActive = btn.classList.contains('tags__btn--active');
+//   const btn = evt.target;
+//   const tag = btn.dataset.value;
+//   const isActive = btn.classList.contains('tags__btn--active');
 
-  if (isActive) {
-    selectedTags.delete(tag);
-  } else {
-    selectedTags.add(tag);
-  }
+//   if (isActive) {
+//     selectedTags.delete(tag);
+//   } else {
+//     selectedTags.add(tag);
+//   }
 
-  btn.classList.toggle('tags__btn--active');
-  console.log(selectedTags);
-}
+//   btn.classList.toggle('tags__btn--active');
+//   console.log(selectedTags);
+// }
