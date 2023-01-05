@@ -5,6 +5,23 @@
  * - декілька із багатьох та new Set()
  */
 
+ 
+const tagsContainer = document.querySelector('.js-tags');
+
+tagsContainer.addEventListener('click', onTagsContainerClick)
+
+function onTagsContainerClick(event) {
+    console.log(event.target.nodeName);
+    if(event.target.nodeName !== 'BUTTON'){
+        return;
+    }
+    
+    event.target.classList.toggle('tags__btn--active');
+}
+
+
+
+
 // const tagsContainer = document.querySelector('.js-tags');
 // let selectedTag = null;
 
