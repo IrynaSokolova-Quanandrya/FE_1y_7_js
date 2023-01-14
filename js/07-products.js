@@ -4,7 +4,9 @@ import products from './data/proucts.js';
  * Створюємо карточку продукту
  * 
  */
-
+<li>
+  <button> Назва гри</button>
+</li>
 {
   /*
 <article class="product">
@@ -15,23 +17,23 @@ import products from './data/proucts.js';
 */
 }
 
-const createArticle = function({name, description, price}){
+const createArticle = function(prodact){
   console.log(name, description, price);
 
-  const articleEl = document.createElement('article');
+  const articleEl = document.createElement('li');
   articleEl.classList = 'product';
 
   const productName = document.createElement('h2');
   productName.classList = 'product__name';
-  productName.textContent = name;
+  productName.textContent = games.name;
 
   const producDescr = document.createElement('p');
   producDescr.classList= 'product__descr';
-  producDescr.textContent = description;
+  producDescr.textContent = prodact.description;
 
   const productPridict = document.createElement('p');
   productPridict.classList = 'product__pridict';
-  productPridict.textContent = `Ціна: ${price} кредитів`;
+  productPridict.textContent = `Ціна: ${prodact.price} кредитів`;
 
     articleEl.append(productName, producDescr, productPridict);
 

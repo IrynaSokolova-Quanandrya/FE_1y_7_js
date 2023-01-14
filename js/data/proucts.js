@@ -1,11 +1,9 @@
-export default [
+const games =  [
     {
-      name: 'Товар-1',
-      description:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eius deleniti dolor facilis consectetur laborum aperiam exercitationem quam hic natus.',
-      price: 2000,
-      available: true,
-      onSale: true,
+      id: 1,
+      name: 'Високосний калькулятор',
+      category: 'calculator',
+
     },
     {
       name: 'Товар-2',
