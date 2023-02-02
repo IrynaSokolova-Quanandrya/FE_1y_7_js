@@ -1,0 +1,27 @@
+{
+  "name": "fe_1y_7_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js/issues"
+  },
+  "homepage": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "uuid": "^8.0.0"
+  }
+}
