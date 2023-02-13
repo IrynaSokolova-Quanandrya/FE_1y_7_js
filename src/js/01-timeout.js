@@ -20,17 +20,26 @@ import '../css/common.css';
  * Очистка таймаута с clearTimeout(timeoutId)
  */
 
-const logger = time => {
-  console.log(`Лог через ${time}ms, потому что не отменили таймаут`);
-};
+// const logger = time => {
+//   console.log(`Лог через ${time}ms, потому что не отменили таймаут`);
+// };
 
-const timerId = setTimeout(logger, 2000, 2000);
+// const timerId = setTimeout(logger, 2000, 2000);
 
-console.log(timerId);
+// console.log(timerId);
 
-const shouldCancelTimer = Math.random() > 0.3;
-console.log(shouldCancelTimer);
+// const shouldCancelTimer = Math.random() > 0.3;
+// console.log(shouldCancelTimer);
 
-if (shouldCancelTimer) {
-  clearTimeout(timerId);
+// if (shouldCancelTimer) {
+//   clearTimeout(timerId);
+// }
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(()=>console.log(i), 1);
+  
+}
+for (let i = 0; i < 3; i++) {
+  setTimeout(()=>console.log(i), 1);
+  
 }

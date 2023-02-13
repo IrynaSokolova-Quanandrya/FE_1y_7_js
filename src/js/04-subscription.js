@@ -1,35 +1,39 @@
-import '../css/common.css';
-import BSN from 'bootstrap.native';
+// ЗАДАЧА 1
+/**
+ * Напишіть функцію printNumbers(from, to) яка виводить число кожну секунду, 
+ * починаючи від from і закінчуючи to.
+    * Зробіть два варіанти рішення.
+    * 1. Використовуючи setInterval.
+    * 2. Використовуючи вкладений setTimeout.
+ */
 
-const refs = {
-  modal: document.querySelector('#subscription-modal'),
-  subscribeBtn: document.querySelector('button[data-subscribe]'),
-};
-const PROMPT_DELAY = 3000;
-const MAX_PROMPT_ATTEMPTS = 3;
-let promptCounter = 0;
-let hasSubscribed = false;
-const modal = new BSN.Modal('#subscription-modal');
+// function printNumbers(from, to) {
+//   let current = from;
 
-openModal();
+//   let timerId = setInterval(() => {
+//     console.log(current);
+//     if (current === to) {
+//       clearInterval(timerId);
+//     }
+//     current++;
+//   }, 1000);
+// }
 
-refs.modal.addEventListener('hide.bs.modal', openModal);
-refs.subscribeBtn.addEventListener('click', onSubscribeBtnClick);
+// printNumbers(5, 10);
 
-function openModal() {
-  if (promptCounter === MAX_PROMPT_ATTEMPTS || hasSubscribed) {
-    console.log('Максимальное кол-во надоеданий или подписался');
-    return;
-  }
+// ЗАДАЧА 2
+/**
+ * Коли запуститься запланована функція?
+ * 1.Після циклу.
+ * 2. До циклу.
+ * 3. На початку циклу.
+ * Що буде показувати в консолі?
+ */
+let a = 0;
 
-  setTimeout(() => {
-    console.log('Открываем надоедалку');
-    modal.show();
-    promptCounter += 1;
-  }, PROMPT_DELAY);
-}
+setTimeout(() => console.log(a), 100); // ?
 
-function onSubscribeBtnClick() {
-  hasSubscribed = true;
-  modal.hide();
+// припустимо, що час виконання цієї функції > 100 мс
+for(let i = 0; i < 100000000; i++) {
+  a += 1;
 }
