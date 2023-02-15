@@ -31,9 +31,10 @@
  */
 let a = 0;
 
-setTimeout(() => console.log(a), 100); // ?
+setTimeout(() => console.log('а в setTimeout', a), 100); // ?
 
 // припустимо, що час виконання цієї функції > 100 мс
-for(let i = 0; i < 100000000; i++) {
+for(let i = 0; i < 10000; i++) {
   a += 1;
+  console.log('а всередині циклу', a);
 }

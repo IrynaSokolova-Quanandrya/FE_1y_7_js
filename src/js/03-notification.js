@@ -9,31 +9,31 @@ import '../css/common.css';
 
 // const NOTIFICATION_DELAY = 3000;
 // let timeoutId = null;
-// const refs = {
-//   notification: document.querySelector('.js-alert'),
-// };
+const refs = {
+  notification: document.querySelector('.js-alert'),
+};
 
-// refs.notification.addEventListener('click', onNotificationClick);
+refs.notification.addEventListener('click', onNotificationClick);
 
-// showNotification();
+showNotification();
 
 /*
  * Функции
  */
-// function onNotificationClick() {
-//   hideNotification();
+function onNotificationClick() {
+  hideNotification();
 
-// }
+}
 
-// function showNotification() {
-//   refs.notification.classList.add('is-visible');
+function showNotification() {
+  refs.notification.classList.add('is-visible');
 
-//   timeoutId = setTimeout(() => {
-//     console.log('Закриваємо алерт автоматично');
-//     hideNotification();
-//   }, NOTIFICATION_DELAY);
-// }
+  timeoutId = setTimeout(() => {
+    console.log('Закриваємо алерт автоматично');
+    hideNotification();
+  }, NOTIFICATION_DELAY);
+}
 
-// function hideNotification() {
-//   refs.notification.classList.remove('is-visible');
-// }
+function hideNotification() {
+  refs.notification.classList.remove('is-visible');
+}
