@@ -1,5 +1,3 @@
-import '../css/common.css';
-
 /**
  * - Показуєм і приховуємо за допомогою класу is-visible
  * - Приховуємо через певний час
@@ -7,33 +5,41 @@ import '../css/common.css';
  * - Очищаємо таймер
  */
 
-// const NOTIFICATION_DELAY = 3000;
-// let timeoutId = null;
+
 const refs = {
   notification: document.querySelector('.js-alert'),
 };
 
 refs.notification.addEventListener('click', onNotificationClick);
-
+let timeoutId = null;
 showNotification();
 
 /*
- * Функции
+ * Функції
  */
 function onNotificationClick() {
   hideNotification();
-
+  console.log('Примусово закрили повідомлення');
+  clearTimeout(timeoutId);
 }
 
 function showNotification() {
   refs.notification.classList.add('is-visible');
 
   timeoutId = setTimeout(() => {
-    console.log('Закриваємо алерт автоматично');
-    hideNotification();
-  }, NOTIFICATION_DELAY);
+    console.log("Закриваю повідомлення");
+    hideNotification()
+
+  }, 3000);
+
 }
 
 function hideNotification() {
   refs.notification.classList.remove('is-visible');
+
+  
 }
+
+
+// const NOTIFICATION_DELAY = 3000;
+// let timeoutId = null;
