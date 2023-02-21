@@ -6,6 +6,63 @@
  *  - Promise.prototype.then(onResolve, onReject)
  */
 
+// const user = {
+//     name: 'Poly',
+//     age: 15,
+// }
+// const promise = new Promise((resolve, rejected)=>{
+//     const isFullfild = Math.random() > 0.3;
+    
+//   setTimeout(()=>{
+//     if(isFullfild){
+//       resolve(user);
+//     } else{
+//         rejected('((((Виконано з помилкою')
+//     }
+//   },
+//    2000)
+
+// });
+
+// let isActive;
+
+// console.log(promise);
+
+// .then(result => {
+//     text.textContent = result.name
+    
+// })
+
+// .catch(error => {
+//     if(error){
+//         isActive = false;
+//     }
+// })
+
+
+
+
+
+
+
+
+function onFulfilled(result) {
+  console.log('onFulfilled -> onFulfilled');
+  console.log(`✅ ${result}`);
+}
+
+function onRejected(error) {
+  console.log('onRejected -> onRejected');
+  console.log(`❌ ${error}`);
+}
+
+
+
+
+
+
+
+
 // const promise = new Promise((resolve, reject) => {
 //   const canFulfill = Math.random() > 0.5;
 

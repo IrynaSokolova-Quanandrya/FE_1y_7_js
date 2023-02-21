@@ -8,6 +8,34 @@ const horses = [
   'Seabiscuit',
 ];
 
+const refs = {
+  startBtn: document.querySelector('.js-start-race'),
+  winnerField: document.querySelector('.js-winner'),
+  progressField: document.querySelector('.js-progress'),
+  tableBody: document.querySelector('.js-results-table > tbody'),
+};
+function run(horse) {
+  const time = getRandomTime(2000, 3000);
+
+  return new Promise((resolve, rejected)=>{
+  setTimeout(()=>{
+    resolve({horse, time})
+  },
+  time);
+  
+})  
+}
+
+run(horses[1]).then(({horse, time}) =>{
+  refs.winnerField.textContent = `🎉 Переможець ${horse}, финишував за ${time}
+  часу`
+}).catch(console.error)
+
+
+
+
+
+
 
 
 // let raceCounter = 0;
