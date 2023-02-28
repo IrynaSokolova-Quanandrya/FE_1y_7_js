@@ -1,10 +1,6 @@
 /*
- * - Cross-Origin Resource Sharing (CORS)
- *  - https://pokeapi.co/
- *  - https://darksky.net/dev
- * - Proxy
- *  - Зберігання API ключів і секретів
- *  - https://lpj-weather-service.herokuapp.com/
+*  - параметри запиту
+*  - аутентифікація
  */
 import '../css/common.css';
 
