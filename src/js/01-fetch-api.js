@@ -15,21 +15,34 @@
 
 import '../css/common.css';
 import pokemonCardTpl from '../templates/pokemon-card.hbs';
-import API from './api-service';
-import getRefs from './get-refs';
+// import API from './api-service';
+// import getRefs from './get-refs';
+
+
+
 const pokemonCard = document.querySelector('.js-card-container');
 const searchForm = document.querySelector('.js-search-form');
 
+searchForm.addEventListener('submit', onFormSearch)
 
+function onFormSearch(event) {  
+    event.preventDefault();
+    const form = event.currentTarget;
+    const value = form.elements.query.value;
 
+    fetchPokemon(value)   
+    .then(pokemon => {
+        const markup = pokemonCardTpl(pokemon);
+        pokemonCard.innerHTML = markup;
+    })
+    form.reset();
+  
+}
 
-
-
-
-
-
-
-
+function fetchPokemon(id) {
+ return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    .then(response=>response.json())
+}
 
 
 
@@ -56,69 +69,69 @@ const searchForm = document.querySelector('.js-search-form');
 
 // const url = 'https://pokeapi.co/api/v2/pokemon/';
 
-searchForm.addEventListener('submit', onSearch)
+// searchForm.addEventListener('submit', onSearch)
 
-function onSearch(e) {
-  e.preventDefault()
-  const form = e.currentTarget;
-  const searchQuery = form.elements.query.value;
+// function onSearch(e) {
+//   e.preventDefault()
+//   const form = e.currentTarget;
+//   const searchQuery = form.elements.query.value;
 
-getPokemon(searchQuery)
-.then(renderPokemonCard)
-.catch(errorMessage)
-.finally(()=>form.reset())
-}
+// getPokemon(searchQuery)
+// .then(renderPokemonCard)
+// .catch(errorMessage)
+// .finally(()=>form.reset())
+// }
 
 
-function getPokemon(pokemonId) {
- return fetch(`${url}${pokemonId}`)
-.then(response => response.json())
-}
+// function getPokemon(pokemonId) {
+//  return fetch(`${url}${pokemonId}`)
+// .then(response => response.json())
+// }
 
-function renderPokemonCard(pokemon) {
+// function renderPokemonCard(pokemon) {
 
-  const markup = pokemonCardTpl(pokemon);
-  pokemonCard.innerHTML = markup;
-}
+//   const markup = pokemonCardTpl(pokemon);
+//   pokemonCard.innerHTML = markup;
+// }
 
-function errorMessage(error) {
-  alert(error.message)
-}
+// function errorMessage(error) {
+//   alert(error.message)
+// }
 
-const refs = getRefs();
+// const refs = getRefs();
 
-refs.searchForm.addEventListener('submit', onSearch);
+// refs.searchForm.addEventListener('submit', onSearch);
 
-function onSearch(e) {
-  e.preventDefault();
+// function onSearch(e) {
+//   e.preventDefault();
 
-  const form = e.currentTarget;
-  const searchQuery = form.elements.query.value;
+//   const form = e.currentTarget;
+//   const searchQuery = form.elements.query.value;
 
-  API.fetchPokemon(searchQuery)
-    .then(renderPokemonCard)
-    .catch(onFetchError)
-    .finally(() => form.reset());
-}
+//   API.fetchPokemon(searchQuery)
+//     .then(renderPokemonCard)
+//     .catch(onFetchError)
+//     .finally(() => form.reset());
+// }
 
-function renderPokemonCard(pokemon) {
-  const markup = pokemonCardTpl(pokemon);
-  refs.cardContainer.innerHTML = markup;
-}
+// function renderPokemonCard(pokemon) {
+//   const markup = pokemonCardTpl(pokemon);
+//   refs.cardContainer.innerHTML = markup;
+// }
 
-function onFetchError(error) {
-  alert('Упс, ми не знайшли вашого покемона!');
-}
+// function onFetchError(error) {
+//   alert('Упс, ми не знайшли вашого покемона!');
+// }
 
-// =========================================
+// // =========================================
 
-const url = 'https://newsapi.org/v2/everything?q=cars';
-const options = {
-  headers: {
-    Authorization: '4330ebfabc654a6992c2aa792f3173a3',
-  },
-};
+// const url = 'https://newsapi.org/v2/everything?q=cars';
+// const options = {
+//   headers: {
+//     Authorization: '4330ebfabc654a6992c2aa792f3173a3',
+//   },
+// };
 
-fetch(url, options)
-  .then(r => r.json())
-  .then(console.log);
+// fetch(url, options)
+//   .then(r => r.json())
+//   .then(console.log);
