@@ -11,21 +11,56 @@
  * 4330ebfabc654a6992c2aa792f3173a3
  * http://newsapi.org/v2/everything?q=cat&language=en&pageSize=5&page=1
  */
+import newsApi from './news-api';
 
-function fetchArticles() {
-    const url = `https://newsapi.org/v2/everything?q=${searchQuery}`
-    const options = {
-        headers: {
-            'X-Api-Key': '3ce63eea477043d7a470d2b21dc5ab4b',
-        }        
-    }
-    return fetch(url, options)
-      .then(response => response.json())
-      .then(({ articles }) => {
-        return articles;
-      });
-  }
-  fetchArticles();
+
+const formRef = document.querySelector('.js-search-form');
+const articlesContainerRef = document.querySelector('.js-articles-container');
+const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+
+formRef.addEventListener('submit', onSearchForm);
+loadMoreBtn.addEventListener('click', onLoadMoreClick);
+
+const newsApiService = new newsApi();
+console.log(newsApiService);
+
+let searchQuery = '';
+
+function onSearchForm(event) {
+  event.preventDefault();
+  
+  const form = event.currentTarget;
+  searchQuery = form.elements.searchQuery.value;
+  
+  fetchArticles(searchQuery);  
+}
+
+function onLoadMoreClick() {
+ fetchArticles(searchQuery)
+}
+
+// function fetchArticles(query) {
+//   fetch(`http://newsapi.org/v2/everything?q=${query}&language=en&pageSize=5&page=1&apiKey=3ce63eea477043d7a470d2b21dc5ab4b`)
+//   .then(response=>response.json())
+//   .then(data=>data.articles)
+//   .then(articles=>console.log(articles))
+// }
+
+
+// function fetchArticles() {
+//     const url = `https://newsapi.org/v2/everything?q=${searchQuery}`
+//     const options = {
+//         headers: {
+//             'X-Api-Key': '3ce63eea477043d7a470d2b21dc5ab4b',
+//         }        
+//     }
+//     return fetch(url, options)
+//       .then(response => response.json())
+//       .then(({ articles }) => {
+//         return articles;
+//       });
+//   }
+//   fetchArticles();
 
 // import articlesTpl from './templates/articles.hbs';
 // import './css/common.css';
