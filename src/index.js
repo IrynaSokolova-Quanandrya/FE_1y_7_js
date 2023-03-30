@@ -12,6 +12,21 @@
  * http://newsapi.org/v2/everything?q=cat&language=en&pageSize=5&page=1
  */
 
+function fetchArticles() {
+    const url = `https://newsapi.org/v2/everything?q=${searchQuery}`
+    const options = {
+        headers: {
+            'X-Api-Key': '3ce63eea477043d7a470d2b21dc5ab4b',
+        }        
+    }
+    return fetch(url, options)
+      .then(response => response.json())
+      .then(({ articles }) => {
+        return articles;
+      });
+  }
+  fetchArticles();
+
 // import articlesTpl from './templates/articles.hbs';
 // import './css/common.css';
 // import NewsApiService from './js/news-service';

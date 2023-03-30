@@ -39,3 +39,27 @@
 //     this.searchQuery = newQuery;
 //   }
 // }
+
+
+const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+const newClients = ['Monkong', 'Singu'];
+
+const allClients = oldClients.concat(newClients);
+
+console.log(allClients);
+// ["Mango", "Ajax", "Poly", "Kiwi", "Monkong", "Singu"]
+
+console.log(oldClients);
+// ["Mango", "Ajax", "Poly", "Kiwi"]
+
+console.log(newClients);
+// ["Monkong", "Singu"]
+
+
+
+
+
+
+
+
+
