@@ -12,7 +12,7 @@
  * http://newsapi.org/v2/everything?q=cat&language=en&pageSize=5&page=1
  */
 import NewsApi from './news-api';
-
+import articlesTpl from './templates/articles.hbs'
 
 const formRef = document.querySelector('.js-search-form');
 const articlesContainerRef = document.querySelector('.js-articles-container');
@@ -27,18 +27,27 @@ function onSearchForm(event) {
   event.preventDefault();
   const form = event.currentTarget;
 
+  articlesContainerRef.innerHTML = '';
+  newsApiService.resetPage()
   newsApiService.searchQuery = form.elements.query.value;
+
   newsApiService.fetchArticles() 
+  .then(createMarkup)
 }
 
 function onLoadMoreClick() {
   newsApiService.increasePage();
   console.log(newsApiService);
   
-  newsApiService.fetchArticles();
+  newsApiService.fetchArticles()
+  .then(createMarkup);
 
 }
 
+function createMarkup(articles) {  
+    const markup = articlesTpl(articles)
+    articlesContainerRef.insertAdjacentHTML('beforeend', markup)  
+}
 
 
 // function fetchArticles() {
