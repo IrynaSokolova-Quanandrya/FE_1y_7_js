@@ -1,16 +1,17 @@
 /*
- * Сhatty events
- * Приемы throttling и debouncing c Lodash
- */
-
-/*
  * Mousemove и throttle
  */
+
+import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
+import { getAge } from './export-default';
+
+console.log(getAge());
 
 const coordsOutputRef = document.querySelector('.js-coords');
 let mouseMoveCbInvocationCounter = 0;
 
-window.addEventListener('mousemove', onMouseMove);
+window.addEventListener('mousemove', debounce(onMouseMove, 250));
 
 function onMouseMove(event) {
   mouseMoveCbInvocationCounter += 1;
@@ -29,7 +30,7 @@ const inputRef = document.querySelector('.js-input');
 const outputRef = document.querySelector('.js-output');
 let inputCbInvocationCounter = 0;
 
-inputRef.addEventListener('input', onInputChange);
+inputRef.addEventListener('input', throttle(onInputChange, 2500));
 
 function onInputChange(event) {
   inputCbInvocationCounter += 1;
@@ -39,3 +40,4 @@ function onInputChange(event) {
     Значення: ${event.target.value}
   `;
 }
+
