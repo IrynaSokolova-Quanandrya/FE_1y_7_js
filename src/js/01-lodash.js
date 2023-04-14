@@ -4,9 +4,6 @@
 
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
-import { getAge } from './export-default';
-
-console.log(getAge());
 
 const coordsOutputRef = document.querySelector('.js-coords');
 let mouseMoveCbInvocationCounter = 0;

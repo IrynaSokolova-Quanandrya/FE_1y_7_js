@@ -1,9 +1,12 @@
-const user = {
-    name: 'userName',
-    age: 15,
-    getAge(){
-        console.log(this.age);
-    }
+ const user = function () {
+    console.log("Це функція user");
 }
 
-export default user;
+ const player = function () {
+    console.log("Це функція player");
+}
+
+export {
+    user,
+    player
+}
