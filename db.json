@@ -1,149 +1,75 @@
 {
-  "books": [
+  "books": [],
+  "movies": [
     {
       "id": 1,
-      "title": "Последнее королевство",
-      "author": "Бернард Корнуэлл",
-      "genres": [
-        "приключения"
-      ],
-      "rating": 8.38
+      "title": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "genres": ["Drama"],
+      "rating": 9.3
     },
     {
       "id": 2,
-      "title": "На берегу спокойных вод",
-      "author": "Роберт Шекли",
-      "genres": [
-        "фантастика"
-      ],
-      "rating": 8.51
+      "title": "The Godfather",
+      "director": "Francis Ford Coppola",
+      "genres": ["Crime", "Drama"],
+      "rating": 9.2
     },
     {
       "id": 3,
-      "title": "Пожиратель призраков",
-      "author": "Говард Лавкрафт",
-      "genres": [
-        "ужасы",
-        "мистика"
-      ],
-      "rating": 7.94
+      "title": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "genres": ["Action", "Crime", "Drama"],
+      "rating": 9.0
     },
     {
       "id": 4,
-      "title": "Разоблаченный проходимец",
-      "author": "Франц Кафка",
-      "genres": [
-        "классика"
-      ],
-      "rating": 6.62
+      "title": "Schindler's List",
+      "director": "Steven Spielberg",
+      "genres": ["Biography", "Drama", "History"],
+      "rating": 8.9
     },
     {
       "id": 5,
-      "title": "Два солнца",
-      "author": "Леонид Кудрявцев",
-      "genres": [
-        "фантастика"
-      ],
-      "rating": 6.36
+      "title": "The Lord of the Rings: The Return of the King",
+      "director": "Peter Jackson",
+      "genres": ["Action", "Adventure", "Drama"],
+      "rating": 8.9
     },
     {
       "id": 6,
-      "title": "Сон смешного человека",
-      "author": "Федор Достоевский",
-      "genres": [
-        "классика"
-      ],
-      "rating": 7.75
+      "title": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "genres": ["Crime", "Drama"],
+      "rating": 8.9
     },
     {
-      "title": "Тестовая книга",
-      "author": "Я",
-      "genres": [
-        "JS"
-      ],
-      "rating": 10,
-      "id": 7
+      "id": 7,
+      "title": "Forrest Gump",
+      "director": "Robert Zemeckis",
+      "genres": ["Comedy", "Drama", "Romance"],
+      "rating": 8.8
     },
     {
-      "title": "Тестовая книга",
-      "author": "Я",
-      "genres": [
-        "JS"
-      ],
-      "rating": 10,
-      "id": 8
+      "id": 8,
+      "title": "Inception",
+      "director": "Christopher Nolan",
+      "genres": ["Action", "Adventure", "Sci-Fi"],
+      "rating": 8.8
     },
     {
-      "title": "Большая тестовая книга по CSS",
-      "author": "Я",
-      "genres": [
-        "CSS"
-      ],
-      "rating": 9,
-      "id": 11
+      "id": 9,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "director": "Peter Jackson",
+      "genres": ["Action", "Adventure", "Drama"],
+      "rating": 8.8
     },
     {
-      "title": "Тестовая книга по CSS",
-      "author": "Я",
-      "genres": [
-        "CSS"
-      ],
-      "rating": 9,
-      "id": 12
-    },
-    {
-      "title": "Большая новая тестовая книга по HTML",
-      "author": "Я",
-      "genres": [
-        "HTML"
-      ],
-      "rating": 7,
-      "id": 13
-    },
-    {
-      "title": "Тестовая книга по HTML",
-      "author": "Манго",
-      "genres": [
-        "HTML"
-      ],
-      "rating": 4,
-      "id": 17
-    },
-    {
-      "title": "Тестовая книга по CSS",
-      "author": "Я",
-      "genres": [
-        "CSS"
-      ],
-      "rating": 1,
-      "id": 18
-    },
-    {
-      "title": "Большая новая книга по NODEJS",
-      "author": "Я",
-      "genres": [
-        "HTML"
-      ],
-      "rating": 7,
-      "id": 19
-    },
-    {
-      "title": "Тестовая книга по CSS",
-      "author": "Я",
-      "genres": [
-        "CSS"
-      ],
-      "rating": 9,
-      "id": 20
-    },
-    {
-      "title": "Тестовая книга по CSS",
-      "author": "Я",
-      "genres": [
-        "CSS"
-      ],
-      "rating": 9,
-      "id": 21
+      "id": 10,
+      "title": "The Matrix",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "genres": ["Action", "Sci-Fi"],
+      "rating": 8.7
     }
   ]
 }
