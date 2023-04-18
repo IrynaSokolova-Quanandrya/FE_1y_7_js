@@ -3,70 +3,70 @@
   "movies": [
     {
       "id": 1,
-      "title": "The Shawshank Redemption",
+      "title": "Втеча з Шоушенка",
       "director": "Frank Darabont",
       "genres": ["Drama"],
       "rating": 9.3
     },
     {
       "id": 2,
-      "title": "The Godfather",
+      "title": "Хресний батько",
       "director": "Francis Ford Coppola",
       "genres": ["Crime", "Drama"],
       "rating": 9.2
     },
     {
       "id": 3,
-      "title": "The Dark Knight",
+      "title": "Темний лицар",
       "director": "Christopher Nolan",
       "genres": ["Action", "Crime", "Drama"],
-      "rating": 9.0
+      "rating": 9
     },
     {
       "id": 4,
-      "title": "Schindler's List",
+      "title": "Список Шиндлера",
       "director": "Steven Spielberg",
       "genres": ["Biography", "Drama", "History"],
       "rating": 8.9
     },
     {
       "id": 5,
-      "title": "The Lord of the Rings: The Return of the King",
+      "title": "Володар кілець: Повернення короля",
       "director": "Peter Jackson",
       "genres": ["Action", "Adventure", "Drama"],
       "rating": 8.9
     },
     {
       "id": 6,
-      "title": "Pulp Fiction",
+      "title": "Кримінальне чтиво",
       "director": "Quentin Tarantino",
       "genres": ["Crime", "Drama"],
       "rating": 8.9
     },
     {
       "id": 7,
-      "title": "Forrest Gump",
+      "title": "Форрест Гамп",
       "director": "Robert Zemeckis",
       "genres": ["Comedy", "Drama", "Romance"],
       "rating": 8.8
     },
     {
       "id": 8,
-      "title": "Inception",
+      "title": "Початок",
       "director": "Christopher Nolan",
       "genres": ["Action", "Adventure", "Sci-Fi"],
       "rating": 8.8
     },
     {
       "id": 9,
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "title": "Володар кілець: Братство персня",
       "director": "Peter Jackson",
       "genres": ["Action", "Adventure", "Drama"],
       "rating": 8.8
     },
     {
       "id": 10,
-      "title": "The Matrix",
+      "title": "Матриця",
       "director": "Lana Wachowski, Lilly Wachowski",
       "genres": ["Action", "Sci-Fi"],
       "rating": 8.7

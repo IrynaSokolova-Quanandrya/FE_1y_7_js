@@ -1,22 +1,22 @@
 # js-22
 
 - Пакет [json-server](https://github.com/typicode/json-server)
-- Postman/Postwoman/Insomnia и т. д.
-- Работа с приватным API
+- Postman/Postwoman/Insomnia і т. д.
+- Робота з приватним API
   - **C**reate
     - Метод POST
-    - Тело
+    - Тіло
     - Заголовки
-    - Ответ
+    - Відповідь
   - **R**ead
     - Метод GET
-    - Ответ
+    - Відповідь
   - **U**pdate
-    - Методы PUT и PATCH
-    - Тело
+    - Методи PUT та PATCH
+    - Тіло
     - Заголовки
-    - Ответ
+    - Відповідь
   - **D**elete
     - Метод DELETE
-    - Ответ
-- Цикл запрос-ответ
+    - Відповідь
+- Цикл запит-відповідь
