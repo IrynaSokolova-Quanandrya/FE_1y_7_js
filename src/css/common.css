@@ -16,3 +16,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+.slider {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.slider__input {
+  width: 100%;
+}
+
+.slider__image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}

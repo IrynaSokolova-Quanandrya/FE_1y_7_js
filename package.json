@@ -25,6 +25,7 @@
     "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "dependencies": {
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "lodash": "^4.17.21"
   }
 }
