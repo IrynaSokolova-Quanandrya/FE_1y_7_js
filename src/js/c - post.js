@@ -1,5 +1,14 @@
 const BASE_URL = 'http://localhost:3000';
 
+
+const newMovie = {
+  title: "NODEJS",
+  director: "Me",
+  genres: [
+    "Drama"
+  ],
+  rating: 10
+}
 function addNewMovie(newMovie) {
     const options = {
         method: 'POST',
@@ -8,27 +17,22 @@ function addNewMovie(newMovie) {
         },
         body: JSON.stringify(newMovie)
     }
-   return fetch(`${BASE_URL}/movies`, options)
+const url = `${BASE_URL}/movies`;
+
+   return fetch(url, options)
     .then(res=>res.json())
     .then(console.log)
 }
 
-addNewMovie({
-    title: "NODEJS",
-    director: "Me",
-    genres: [
-      "Drama"
-    ],
-    rating: 10
-  })
-  addNewMovie({
-    title: "HTML",
-    director: "Me",
-    genres: [
-      "dev"
-    ],
-    rating: 4
-  })
+addNewMovie(newMovie)
+  // addNewMovie({
+  //   title: "HTML",
+  //   director: "Me",
+  //   genres: [
+  //     "dev"
+  //   ],
+  //   rating: 4
+  // })
 
 
 

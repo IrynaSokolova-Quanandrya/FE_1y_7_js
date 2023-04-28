@@ -1,7 +1,7 @@
 const BASE_URL = 'http://localhost:3000';
 
 function getMovies() {
-  fetch(`${BASE_URL}/movies`)
+  fetch(`${BASE_URL}/students`)
   .then(response => response.json())
   .then(console.log)
 }
