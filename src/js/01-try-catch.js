@@ -11,14 +11,3 @@
 //    - stack
 //  - Блок catch без об'екту помилки
 
-try {
-  console.log('Всередині try до myVar');
-
-  myVar;
-
-  console.log('Всередині try після myVar');
-} catch (error) {
-  console.log('Помилка!');
-}
-
-console.log('Після try...catch');
