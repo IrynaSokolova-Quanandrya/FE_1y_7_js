@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./css/food.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body class="sf">
+    <!-- <form class="feedback-form js-feedback-form">
+      <label>
+        <b>Ім'я</b>
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите ваше имя"
+          value="Анонім"
+        />
+      </label>
+      <label>
+        <b>Повідомлення</b>
+        <textarea name="message" rows="6"></textarea>
+      </label>
+      <button type="submit">Залишити відгук</button>
+    </form> -->
+
+    <ul class="gallery js-gallery"></ul>
+
+    <div class="toolbar">
+      <!-- Разметка переключателя темы -->
+      <div class="theme-switch">
+        <!-- <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg> -->
+
+        <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Переключить между тёмной и светлой темой"
+          />
+          <label
+            aria-hidden="true"
+            class="theme-switch__track"
+            for="theme-switch-toggle"
+          >
+          </label>
+          <div aria-hidden="true" class="theme-switch__marker"></div>
+        </div>
+
+        <!-- <svg class="theme-switch__icon" aria-label="Иконка луны">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg> -->
+      </div>
+    </div>
+
+    <!-- В этот список рендери разметку меню -->
+    <ul class="menu js-menu"></ul>
+<script src="./js/food.js" type="module"></script>
+  </body>
+</html>
