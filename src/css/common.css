@@ -11,8 +11,29 @@ body {
   color: #2a2a2a;
 }
 
+ul,
+h1,
+h2,
+li,
+p,
+a{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* CART */
+
+.product{
+  outline: solid 3px green;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

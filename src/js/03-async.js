@@ -26,18 +26,6 @@ async function makeSmoothie() {
     
 }
 
-// В app.js
-import menuTemplate from '/path/to/templates/menu.hbs';
-
-const menuData = {
-  title: 'Eat it createElement, templates rule!',
-  items: ['Handlebars', 'LoDash', 'Pug', 'EJS', 'lit-html'],
-};
-
-const markup = menuTempalte(menuData); // html розмітка з підставленими значеннями
-
-
-
 
 
 // Створюємо функцію makeCocktail
