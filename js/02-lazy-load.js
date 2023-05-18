@@ -1,6 +1,11 @@
+/*
+ * Ленивая загрузка изображений (концепция)
+ * - нативная поддержка
+ * - событие загрузки изображения
+ */
 
 /*
- * Олдскул зі скролом
+ * Олдскул со скролом
  */
 // const images = document.querySelectorAll('.feed img');
 
@@ -25,6 +30,39 @@
 /*
  * Intersection Observer с unobserve (один на всіх)
  */
+
+const images = document.querySelectorAll('img')
+const options = {
+  rootMargin: '150px',
+}
+const io = new IntersectionObserver((entries, observer)=>{
+  entries.forEach(entry=>{    
+    if(entry.isIntersecting){
+
+      const image = entry.target;
+
+      image.src = image.dataset.lazy;
+      image.classList.add('appear');
+
+      observer.unobserve(image)
+    }
+  })
+}, options)
+images.forEach(image=>io.observe(image))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,7 +127,7 @@
 // lazyLoad(images);
 
 /*
- * Intersection Observer с disconnect (на кожен свій)
+ * Intersection Observer с disconnect (на каждый свой)
  */
 // const images = document.querySelectorAll('.feed img');
 
