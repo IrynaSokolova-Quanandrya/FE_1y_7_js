@@ -1,1 +1,6 @@
-# FE_1y_7_js
+# js-22
+
+- пошуковий фільтр
+- [Ліниве завантаження зображень](https://web.dev/native-lazy-loading/)
+  - Нативная с атрибутом loading
+  - Библиотека lazysizes
