@@ -17,28 +17,31 @@ function onControlsClick(event) {
     '.controls__item--active',
   );
 
-  if (currentActiveControlItem) {
-    currentActiveControlItem.classList.remove('controls__item--active');
+  
 
-    const paneId = getPaneId(currentActiveControlItem);
-    const pane = getPaneById(paneId);
-    pane.classList.remove('pane--active');
-    // console.log(paneId);
-  }
+  // if (currentActiveControlItem) {
+  //   currentActiveControlItem.classList.remove('controls__item--active');
+
+  //   const paneId = getPaneId(currentActiveControlItem);
+  //   const pane = getPaneById(paneId);
+  //   pane.classList.remove('pane--active');
+  //   // console.log(paneId);
+  // }
 
   const controlItem = event.target;
   controlItem.classList.add('controls__item--active');
 
-  const paneId = getPaneId(controlItem);
-  const pane = getPaneById(paneId);
-  pane.classList.add('pane--active');
+
+  // const paneId = getPaneId(controlItem);
+  // const pane = getPaneById(paneId);
+  // pane.classList.add('pane--active');
   // console.log(pane);
 }
 
-function getPaneId(control) {
-  return control.getAttribute('href').slice(1);
-}
+// function getPaneId(control) {
+//   return control.getAttribute('href').slice(1);
+// }
 
-function getPaneById(id) {
-  return refs.panes.querySelector(`#${id}`);
-}
+// function getPaneById(id) {
+//   return refs.panes.querySelector(`#${id}`);
+// }

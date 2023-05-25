@@ -1,0 +1,20 @@
+{
+  "name": "fe_1y_7_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js/issues"
+  },
+  "homepage": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js#readme"
+}
