@@ -4,7 +4,8 @@
   "description": "",
   "main": "classic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js/issues"
   },
-  "homepage": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js#readme"
+  "homepage": "https://github.com/IrynaSokolova-Quanandrya/FE_1y_7_js#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "parcel-bundler": "^1.12.5"
+  }
 }
